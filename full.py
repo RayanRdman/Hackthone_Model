@@ -74,7 +74,7 @@ def suggest_investment(surplus, eligibility_percent):
 @app.post("/predict_full")
 def predict_full(data: FullInput):
 
-    with open('full_integrated_model.pkl', 'rb') as f:
+    with open('Model/full_integrated_model.pkl', 'rb') as f:
         models = pickle.load(f)
 
     eligibility_model = models["eligibility"]
