@@ -7,6 +7,9 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 
 app = FastAPI()
+@app.get("/")
+async def root():
+    return {"message": "Model API is up and running"}
 
 app.add_middleware(
     CORSMiddleware,
